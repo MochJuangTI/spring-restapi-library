@@ -7,7 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 
 @Getter
 @Setter
@@ -22,11 +22,11 @@ public class Borrowing {
 
     @Column(name = "created_timestamp")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date createTimestamp;
+    private Timestamp createTimestamp;
 
     @Column(name = "return_timestamp")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date returnTimestamp;
+    private Timestamp returnTimestamp;
 
     @ManyToOne
     @JoinColumn(name = "member_id", referencedColumnName = "id")
