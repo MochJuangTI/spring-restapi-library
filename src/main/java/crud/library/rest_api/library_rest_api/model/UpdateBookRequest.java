@@ -12,7 +12,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class CreateBookRequest {
+public class UpdateBookRequest {
+
+    @NotBlank
+    private Long bookId;
+
     @NotBlank
     @Size(min = 2, max = 100)
     private String title;
